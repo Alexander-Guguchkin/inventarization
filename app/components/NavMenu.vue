@@ -2,7 +2,7 @@
 const items = ref([
   [
     {
-      label:'Profile',
+      label:'Профиль',
       avatar: {
         src: 'https://avatars.githubusercontent.com/u/739984?v=4'
       },
@@ -11,6 +11,7 @@ const items = ref([
     {
       label: 'Главная',
       type: 'label',
+      icon:'i-lucide-house',
       to:'/'
     },
     {
@@ -21,6 +22,7 @@ const items = ref([
           label: 'Компьютеры',
           description: 'Fully styled and customizable components for Nuxt.',
           icon: 'i-lucide-house',
+          to:'/computers'
         },
         {
           label: 'Комплектующие',
