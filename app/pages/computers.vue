@@ -2,20 +2,20 @@
   <div class="computers">
     <UContainer>
       <Wrapper>
-        <div class="title">Компьютеры</div>
-        <div class="computers__list">
-          <UCard v-for="elem in computers">
-            <template #header>
-              Имя компьютера: {{ elem.name }}
-            </template>
-            <div class="computers__info">
-              <div class="description">Описание: {{ elem.description }}</div>
-              <div class="office">Кабинет: {{ elem.office }}</div>
-              <div class="username">Имя пользователя: {{ elem.username }}</div>
-              <div class="serialnumber">Серийный номер: {{ elem.serialnumber }}</div>
-            </div>
-          </UCard>
+        <div class="computers__header">
+
+          <div class="sec">
+            <div class="title">Компьютеры</div>
+          </div>
+
+          <div class="view sec">
+            <UButton @click="editView()">Таблица</UButton>
+            <UButton @click="editView()">Карточка</UButton>
+          </div>
+
         </div>
+        <Table :data = "computers" v-if="view === true"/>
+        <CardList :data = "computers" v-else/>
       </Wrapper>
     </UContainer>
   </div>
@@ -39,18 +39,21 @@ const computers = [{
   serialnumber: 12345612345
 },
 ]
+let view = ref(false)
+const editView = ()=>{
+  view.value =   !view.value
+}
 </script>
 
 <style scoped>
-.computers__list {
+.computers__header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
 }
-
-.computers__info {
+.view {
   display: flex;
-  flex-direction: column;
   gap: 20px;
+  justify-content: flex-end;
 }
 </style>
