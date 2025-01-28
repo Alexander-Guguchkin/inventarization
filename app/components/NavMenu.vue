@@ -50,22 +50,21 @@ const items = ref([
     {
       label: 'Сервера',
       icon: 'i-lucide-database',
-      to:'/servers'
+
     },
     {
       label: 'Пароли',
       icon: 'i-lucide-box',
-      to:'/password'
+
     },
     {
       label: 'Прочее',
       icon: 'i-lucide-box',
-      to:'/password'
+
     },
     {
       label: 'Пользователи',
       icon: 'i-lucide-box',
-      to:'/password'
     },
     
   ],
@@ -84,9 +83,7 @@ const items = ref([
 
 <template>
   <div class="header">
-    <UContainer>
       <UNavigationMenu orientation="vertical" :items="items" class="data-[orientation=vertical]:w-48" />
-    </UContainer>
   </div>
 </template>
 <style scoped>
@@ -94,5 +91,8 @@ const items = ref([
   background: rgb(48, 48, 48);
   height: 100vh;
   padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 </style>

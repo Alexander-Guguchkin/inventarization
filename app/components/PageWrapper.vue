@@ -1,8 +1,6 @@
 <template>
   <div class="wrapper">
-    <slot>
-
-    </slot>
+    <slot/>
   </div>
 </template>
 
@@ -10,7 +8,7 @@
 
 </script>
 
-<style>
+<style scoped>
 .wrapper{
   padding: 10px;
 }
