@@ -28,6 +28,7 @@ const items = ref([
           label: 'Комплектующие',
           description: 'Fully styled and customizable components for Nuxt.',
           icon: 'i-lucide-house',
+          to:'/accessories'
         },
 
         {

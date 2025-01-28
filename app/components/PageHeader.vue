@@ -8,3 +8,8 @@ const props = defineProps<{
     title:string
 }>();
 </script>
+<style scoped>
+.page__header{
+  margin-bottom: 40px;
+}
+</style>
