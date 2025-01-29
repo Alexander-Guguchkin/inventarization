@@ -2,17 +2,17 @@
   <div class="accessories">
     <PageWrapper>
       <PageHeader title="Комплеутующие" />
-      <TablePage :data="data" :title="title" />
+      <TableStatus :data="data" :title="title" />
     </PageWrapper>
   </div>
 </template>
 
 <script lang="ts" setup>
 type Accessories = {
-  id: string;
+  id: number;
   name: string;
   description: string;
-  computer_id: string;
+  computer_id: number;
   status: "работает" | "сломан" | "ремонт";
 }
 const title = {
@@ -25,20 +25,18 @@ const title = {
 
 const data = ref<Accessories[]>([
   {
-    id: "1",
+    id: 1,
     name: "intel 1",
     status: "сломан",
     description: 'cpu',
-    computer_id: "1",
+    computer_id: 1,
   },
   {
-    id: "2",
+    id: 2,
     name: "intel 2",
     status: "работает",
     description: 'cpu',
-    computer_id: "2",
+    computer_id: 2
   },
 ])
 </script>
-
-<style></style>

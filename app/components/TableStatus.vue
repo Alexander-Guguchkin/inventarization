@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="flex flex-col flex-1 w-full">
-      <div class="flex px-4 py-3.5 border-b border-[var(--ui-border-accented)]">
-        <UInput v-model="globalFilter" class="max-w-sm mx-6" placeholder="Filter..." />
-        <UButton icon="i-lucide-plus" class="cursor-pointer" />
+      <div class="flex flex-col flex-1 w-full">
+        <div class="flex px-4 py-3.5 border-b border-[var(--ui-border-accented)]">
+          <UInput v-model="globalFilter" class="max-w-sm mx-6" placeholder="Filter..." />
+          <UButton icon="i-lucide-plus" class="cursor-pointer" />
+        </div>
+        <UTable ref="table" v-model:global-filter="globalFilter" :data="data" :columns="columns" />
       </div>
-      <UTable ref="table" v-model:global-filter="globalFilter" :data="data" :columns="columns" />
-    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -37,7 +37,18 @@ const columns: TableColumn[] = [
     accessorKey: props.title.title3.accessKey,
     header: () => h("div", { class: "text-center" }, props.title.title3.header),
     cell: ({ row }) => {
-      return h("div", { class: "text-center" }, row.getValue(props.title.title3.accessKey))
+      const color = {
+        работает: "success" as const,
+        сломан: "error" as const,
+        ремонт: "neutral" as const,
+      }[row.getValue(props.title.title3.accessKey) as string];
+
+      return h(
+        "div",
+        { class: "text-center" },
+        h(UBadge, { class: "capitalize", variant: "subtle", color }, () =>
+          row.getValue(props.title.title3.accessKey)
+        ))
     },
   },
   {

@@ -16,63 +16,62 @@ const items = ref([
     },
     {
       label: 'ПК и орг техника',
-      icon: 'i-lucide-book-open',
+      icon: 'i-meteor-icons:devices',
       children: [
       {
           label: 'Компьютеры',
           description: 'Fully styled and customizable components for Nuxt.',
-          icon: 'i-lucide-house',
+          icon: 'i-lucide-computer',
           to:'/computers'
         },
         {
           label: 'Комплектующие',
           description: 'Fully styled and customizable components for Nuxt.',
-          icon: 'i-lucide-house',
+          icon: 'i-lucide-microchip',
           to:'/accessories'
         },
 
         {
           label: 'Мониторы',
           description: 'Learn how to install and configure Nuxt UI in your application.',
-          icon: 'i-lucide-cloud-download'
+          icon: 'i-lucide:monitor',
+          to:'/monitors'
         },
         {
-          label: 'Гарнитура',
-          icon: 'i-lucide-smile',
-          description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+          label: 'Перефирия',
+          icon: 'i-lucide:keyboard',
+          description: 'You have nothing to do, @nuxt/icon will handle it automatically.',
+          to:'/periphery'
         },
         {
           label: 'Орг. техника',
-          icon: 'i-lucide-swatch-book',
-          description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+          icon: 'i-lucide:printer',
+          description: 'Choose a primary and a neutral color from your Tailwind CSS theme.',
+          to:'/orgTech'
         }
       ]
     },
     {
       label: 'Сервера',
       icon: 'i-lucide-database',
-
+      to:'/servers'
     },
     {
       label: 'Пароли',
-      icon: 'i-lucide-box',
-
-    },
-    {
-      label: 'Прочее',
-      icon: 'i-lucide-box',
-
+      icon: 'i-lucide-lock-keyhole',
+      to:'/passwords'
     },
     {
       label: 'Пользователи',
-      icon: 'i-lucide-box',
+      icon: 'i-lucide-smile',
+      to:'/users'
     },
     
   ],
   [
     {
       label: 'Настройки',
-      icon: 'i-simple-icons-github',
+      icon: 'i-lucide-bolt',
     },
     {
       label: 'Help',
