@@ -2,71 +2,71 @@
 const items = ref([
   [
     {
-      label:'Профиль',
+      label: 'Профиль',
       avatar: {
         src: 'https://avatars.githubusercontent.com/u/739984?v=4'
       },
-      badge: 100
+      to: '/profile'
     },
     {
       label: 'Главная',
       type: 'label',
-      icon:'i-lucide-house',
-      to:'/'
+      icon: 'i-lucide-house',
+      to: '/'
     },
     {
       label: 'ПК и орг техника',
       icon: 'i-meteor-icons:devices',
       children: [
-      {
+        {
           label: 'Компьютеры',
           description: 'Fully styled and customizable components for Nuxt.',
           icon: 'i-lucide-computer',
-          to:'/computers'
+          to: '/computers'
         },
         {
           label: 'Комплектующие',
           description: 'Fully styled and customizable components for Nuxt.',
           icon: 'i-lucide-microchip',
-          to:'/accessories'
+          to: '/accessories'
         },
 
         {
           label: 'Мониторы',
           description: 'Learn how to install and configure Nuxt UI in your application.',
           icon: 'i-lucide:monitor',
-          to:'/monitors'
+          to: '/monitors'
         },
         {
           label: 'Перефирия',
           icon: 'i-lucide:keyboard',
           description: 'You have nothing to do, @nuxt/icon will handle it automatically.',
-          to:'/periphery'
+          to: '/periphery'
         },
         {
           label: 'Орг. техника',
           icon: 'i-lucide:printer',
           description: 'Choose a primary and a neutral color from your Tailwind CSS theme.',
-          to:'/orgTech'
+          to: '/orgTech'
         }
       ]
     },
     {
       label: 'Сервера',
       icon: 'i-lucide-database',
-      to:'/servers'
+      to: '/servers'
     },
     {
       label: 'Пароли',
       icon: 'i-lucide-lock-keyhole',
-      to:'/passwords'
+      to: '/passwords'
     },
     {
       label: 'Пользователи',
       icon: 'i-lucide-smile',
-      to:'/users'
+      to: '/users'
     },
-    
+
   ],
   [
     {
@@ -74,7 +74,7 @@ const items = ref([
       icon: 'i-lucide-bolt',
     },
     {
-      label: 'Help',
+      label: 'Помощь',
       icon: 'i-lucide-circle-help',
     }
   ]
@@ -83,7 +83,7 @@ const items = ref([
 
 <template>
   <div class="header">
-      <UNavigationMenu orientation="vertical" :items="items" class="data-[orientation=vertical]:w-48" />
+    <UNavigationMenu orientation="vertical" :items="items" class="data-[orientation=vertical]:w-48" />
   </div>
 </template>
 <style scoped>
