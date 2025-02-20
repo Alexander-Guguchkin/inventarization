@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
-    <slot/>
+    <slot />
   </div>
 </template>
 <style scoped>
-.wrapper{
-  padding: 10px;
+.wrapper {
+  padding: 20px;
 }
 </style>
