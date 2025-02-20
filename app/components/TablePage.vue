@@ -58,5 +58,5 @@ const columns: TableColumn[] = [
 
 const table = useTemplateRef("table");
 
-const globalFilter = ref();
+const globalFilter = ref(); // поменять глобальны фильтр на id и название 
 </script>
